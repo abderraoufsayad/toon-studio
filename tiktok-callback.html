@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting TikTok · Toon Studio</title>
+<style>
+  :root { --bg: #fbf6ee; --ink: #23201c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #17140f; --ink: #f1ebe2; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Connecting TikTok…</h1>
+  <p>Handing the sign-in to Toon Studio on this computer. If nothing happens, make sure Toon Studio is running.</p>
+</main>
+<script>
+  // TikTok sends the sign-in code here (a registered https address); Toon Studio runs on this same computer.
+  location.replace("http://127.0.0.1:4242/api/toon/tiktok/callback" + location.search);
+</script>
+</body>
+</html>
